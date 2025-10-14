@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 300;
+    /* Light */
+    font-display: swap;
+    src: url("../fonts/Gordita-Light.woff2") format("woff2"),
+        url("../fonts/Gordita-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    /* Regular */
+    font-display: swap;
+    src: url("../fonts/Gordita-Regular.woff2") format("woff2"),
+        url("../fonts/Gordita-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 500;
+    /* Medium */
+    font-display: swap;
+    src: url("../fonts/Gordita-Medium.woff2") format("woff2"),
+        url("../fonts/Gordita-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 700;
+    /* Bold */
+    font-display: swap;
+    src: url("../fonts/Gordita-Bold.woff2") format("woff2"),
+        url("../fonts/Gordita-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 900;
+    /* Black */
+    font-display: swap;
+    src: url("../fonts/Gordita-Black.woff2") format("woff2"),
+        url("../fonts/Gordita-Black.otf") format("opentype");
+}
