@@ -1,22 +1,28 @@
-The MIT License (MIT)
+Licensed Internal Code (LIC)
 
-Copyright (c) 2014-2019 British Columbia Institute of Technology
-Copyright (c) 2019-present CodeIgniter Foundation
+Copyright (c) 2024 Develogy. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This software and associated documentation files (the "Software") are the property of Develogy ("the Company"). By using the Software, you agree to the following terms:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+License Grant
+Develogy grants a non-exclusive, non-transferable, and revocable license to use the Software, restricted to employees, contractors, and authorized personnel within the Develogy organization.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+Use Restrictions
+
+Internal Use Only: The Software is intended solely for internal use within the Develogy organization and may not be distributed or transferred to third parties, unless the Software is purchased by another owner.
+Modifications: Only authorized personnel may modify or update the Software.
+Prohibition of Distribution: Distribution, sale, or any form of commercialization to third parties is not permitted without prior authorization.
+Ownership
+Develogy retains all rights, title, and interest in the Software, including all intellectual property rights. This license does not grant any ownership rights to third parties; it is unique and exclusively for Develogy.
+
+Confidentiality
+The Software and its source code must be handled with strict confidentiality and may not be disclosed without prior authorization.
+
+Termination
+This license is effective until terminated by Develogy, which may do so in the event of any breach of its terms. Upon termination, you must cease using the Software and delete all copies in your possession.
+
+Limited Warranty
+The Software is provided "AS IS" and Develogy does not warrant that it will be error-free or operate uninterrupted.
+
+Limitation of Liability
+Develogy shall not be liable for any direct, indirect, incidental, special, exemplary, or consequential damages arising out of the use of or inability to use the Software, even if advised of the possibility of such damages.
