@@ -2,6 +2,12 @@
 
 namespace Config;
 
+use App\Filters\Auth;
+use App\Filters\AuthRedirect;
+use App\Filters\FormsRates;
+use App\Filters\IsAdmin;
+use App\Filters\IsNotAnalyst;
+
 use CodeIgniter\Config\Filters as BaseFilters;
 use CodeIgniter\Filters\Cors;
 use CodeIgniter\Filters\CSRF;
@@ -34,6 +40,11 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+        'auth'          => Auth::class,
+        'authredirect'  => AuthRedirect::class,
+        'isadmin'       => IsAdmin::class,
+        'isnotanalyst'  => IsNotAnalyst::class,
+        'formsrates'    => FormsRates::class,
     ];
 
     /**

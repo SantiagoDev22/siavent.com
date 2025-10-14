@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "tailwindcss": "npx tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./public/css/website.css -w -m",
+    "tailwindcss-landing": "npx tailwindcss -c ./tailwind.landing.config.js -i ./src/input.css -o ./public/css/landing.css -w -m",
+    "tailwindcss-backend": "npx tailwindcss -c ./tailwind.backend.config.js -i ./src/input.backend.css -o ./public/css/backend.css -w -m",
+    "tailwindcss-login": "npx tailwindcss -c ./tailwind.login.config.js -i ./src/input.backend.css -o ./public/css/login.css -w -m"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "daisyui": "^2.46.0",
+    "flowbite": "^2.5.2"
+  }
+}

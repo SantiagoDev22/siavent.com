@@ -61,7 +61,7 @@ writable/uploads/*
 !writable/uploads/index.html
 
 writable/debugbar/*
-!writable/debugbar/index.html
+!writable/debugbar/.gitkeep
 
 php_errors.log
 
@@ -100,15 +100,27 @@ _modules/*
 .idea/
 *.iml
 
-# NetBeans
-/nbproject/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-/nbactions.xml
-/nb-configuration.xml
-/.nb-gradle/
+
+#-----------------------
+# Node.js
+#-----------------------
+node_modules/
+
+#-----------------------
+# ENVIRONMENT
+#-----------------------
+.env
+
+
+# Netbeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+.nb-gradle/
 
 # Sublime Text
 *.tmlanguage.cache
@@ -124,3 +136,7 @@ _modules/*
 
 /results/
 /phpunit*.xml
+/.phpunit.*.cache
+.php-cs-fixer*
+
+!public/uploads/
