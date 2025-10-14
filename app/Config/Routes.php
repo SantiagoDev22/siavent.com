@@ -122,7 +122,7 @@ $routes->environment('development', static function ($routes) {
         $routes->get('(:segment)', 'Landing\Pages::index/$1', ['as' => 'landing.pages.index']);
 
         // Thanks
-        $routes->addRedirect('', 'la-opcion-para-planear-tu-graduacion');
+        $routes->addRedirect('', 'pruebas');
     });
 });
 
@@ -142,7 +142,7 @@ $routes->get('aviso-privacidad', 'Landing\Pages::privacy', ['as' => 'website.pag
 
 $routes->get('(:segment)', 'Landing\Pages::index/$1', ['as' => 'website.pages.index']);
 
-$routes->addRedirect('/', 'la-opcion-para-planear-tu-graduacion');
+$routes->addRedirect('/', 'pruebas');
 
 $routes->environment('production', static function ($routes) {
     // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps

@@ -19,9 +19,9 @@ class SettingsSeeder extends Seeder
     {
         helper('setting');
 
-        setting()->get('App.general', 'company') ?? setting()->set('App.general', 'On Eventos', 'company');
+        setting()->get('App.general', 'company') ?? setting()->set('App.general', 'SIAVENT', 'company');
 
-        setting()->get('App.general', 'phones') ?? setting()->set('App.general', '442 270 2947', 'phones');
+        setting()->get('App.general', 'phones') ?? setting()->set('App.general', '', 'phones');
 
         setting()->get('App.general', 'theme') ?? setting()->set('App.general', 'winter', 'theme');
 
@@ -35,7 +35,7 @@ class SettingsSeeder extends Seeder
 
         setting()->get('App.emails', 'cc') ?? setting()->set('App.emails', '', 'cc');
 
-        setting()->get('App.emails', 'bcc') ?? setting()->set('App.emails', 'daniel@cimientomx.com', 'bcc');
+        setting()->get('App.emails', 'bcc') ?? setting()->set('App.emails', '', 'bcc');
 
         setting()->get('App.emails', 'support') ?? setting()->set('App.emails', 'info@develogy.mx', 'support');
 
