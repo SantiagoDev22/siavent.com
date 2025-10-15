@@ -30,7 +30,7 @@ $company = setting()->get('App.general', 'company');
         <div class=" relative z-10">
             <figure>
                 <img class=" w-full bg-cover bg-no-repeat object-contain" width="0" height="0"
-                    src="<?= base_url($landing['cover']) ?>" alt="<?= esc($landing['title']) ?>">
+                    src="<?= base_url('images/landing/covers/1760499527_8dbe01b934c7dd535f20.webp') ?>" alt="<?= esc($landing['title']) ?>">
             </figure>
         </div>
         <div class=" absolute flex items-center justify-center lg:mb-20 mb-14  inset-0 z-30 ">
