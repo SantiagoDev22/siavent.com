@@ -49,7 +49,7 @@ $company = setting()->get('App.general', 'company');
         <div class="absolute bottom-0 right-14 z-10">
             <figure>
                 <img class="w-[160px] bg-cover bg-no-repeat object-scale-down" width="0" height="0"
-                    src="<?= base_url('images/default/c_rculos.webp') ?>" loading="lazy" alt="circulos decorativos">
+                    src="<?= base_url('images/default/c_rculoss.webp') ?>" loading="lazy" alt="circulos decorativos">
             </figure>
         </div>
     </section>
@@ -136,21 +136,21 @@ $company = setting()->get('App.general', 'company');
         <div class="inline-flex justify-start items-center gap-5">
             <div class="w-72 inline-flex flex-col justify-start items-start gap-5">
                 <div class="self-stretch h-56 p-2.5 bg-white rounded-[40px] shadow-[0px_0px_40px_0px_rgba(9,59,87,0.10)] flex flex-col justify-start items-start gap-2.5">
-                    <img class="self-stretch flex-1 rounded-[32px]" src="https://placehold.co/272x212" loading="lazy" alt="Placeholder image"/>
+                    <img class="self-stretch flex-1 rounded-[32px]" src="https://placehold.co/272x212" loading="lazy" alt="Placeholder image" />
                 </div>
                 <div class="self-stretch h-56 p-2.5 bg-white rounded-[40px] shadow-[0px_0px_40px_0px_rgba(9,59,87,0.10)] flex flex-col justify-start items-start gap-2.5">
-                    <img class="self-stretch flex-1 rounded-[32px]" src="https://placehold.co/272x212" loading="lazy" alt="Placeholder image"/>
+                    <img class="self-stretch flex-1 rounded-[32px]" src="https://placehold.co/272x212" loading="lazy" alt="Placeholder image" />
                 </div>
                 <div class="self-stretch h-56 p-2.5 bg-white rounded-[40px] shadow-[0px_0px_40px_0px_rgba(9,59,87,0.10)] flex flex-col justify-start items-start gap-2.5">
-                    <img class="self-stretch flex-1 rounded-[32px]" src="https://placehold.co/272x212" loading="lazy" alt="Placeholder image"/>
+                    <img class="self-stretch flex-1 rounded-[32px]" src="https://placehold.co/272x212" loading="lazy" alt="Placeholder image" />
                 </div>
             </div>
             <div class="w-72 inline-flex flex-col justify-start items-start gap-5">
                 <div class="self-stretch h-56 p-2.5 bg-white rounded-[40px] shadow-[0px_0px_40px_0px_rgba(9,59,87,0.10)] flex flex-col justify-start items-start gap-2.5">
-                    <img class="self-stretch flex-1 rounded-[32px]" src="https://placehold.co/272x212" loading="lazy" alt="Placeholder image"/>
+                    <img class="self-stretch flex-1 rounded-[32px]" src="https://placehold.co/272x212" loading="lazy" alt="Placeholder image" />
                 </div>
                 <div class="self-stretch h-56 p-2.5 bg-white rounded-[40px] shadow-[0px_0px_40px_0px_rgba(9,59,87,0.10)] flex flex-col justify-start items-start gap-2.5">
-                    <img class="self-stretch flex-1 rounded-[32px]" src="https://placehold.co/272x212" loading="lazy" alt="Placeholder image"/>
+                    <img class="self-stretch flex-1 rounded-[32px]" src="https://placehold.co/272x212" loading="lazy" alt="Placeholder image" />
                 </div>
             </div>
         </div>
