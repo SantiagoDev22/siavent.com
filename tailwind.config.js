@@ -86,6 +86,8 @@ module.exports = {
         'blue': 'linear-gradient(90deg, #01ACCA 0.26%, rgba(1, 172, 202, 0.80) 34.57%, rgba(46, 196, 182, 0.00) 63.67%)',
         'form': "url('../images/index/background.webp')",
         'banner': "url('../images/index/banner.webp')",
+        'fondo-thanks': "url('../images/landing/home/fondo-thanks.webp')",
+
       },
       boxShadow: {
         'card': '0px 0px 10px 0px #01113A26',
