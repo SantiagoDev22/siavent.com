@@ -27,6 +27,11 @@ $company = setting()->get('App.general', 'company');
     <?= $this->include('landing/layouts/navbar'); ?>
 
     <section class=" relative ">
+        <div class=" absolute lg:bottom-0 bottom-10 right-6 lg:right-10">
+            <figure>
+                <img class=" w-auto lg:h-[370px] h-[220px]" src="<?= base_url('images/landing/home/puntos.svg') ?>" alt="">
+            </figure>
+        </div>
         <div class=" relative z-10">
             <figure>
                 <img class=" w-full lg:h-[925px] h-[825px] bg-cover bg-no-repeat object-cover" width="0" height="0" src="<?= base_url('images/landing/covers/1760499527_8dbe01b934c7dd535f20.webp') ?>" alt="<?= esc($landing['title']) ?>">
@@ -286,8 +291,19 @@ $company = setting()->get('App.general', 'company');
         </div>
     </section>
 
-    <section>
-        <div class=" bg-[#093B57] lg:py-[120px] py-[80px]">
+    <section class=" relative">
+
+        <div class=" bg-[#093B57] lg:py-[120px] py-[80px] relative">
+            <div class=" absolute lg:-top-48 lg:block hidden left-6 lg:left-10">
+                <figure>
+                    <img class=" w-auto lg:h-[370px] h-[220px]" src="<?= base_url('images/landing/home/puntos.svg') ?>" alt="">
+                </figure>
+            </div>
+            <div class=" absolute lg:-bottom-48 lg:block hidden lg:right-10">
+                <figure>
+                    <img class=" w-auto lg:h-[370px] h-[220px]" src="<?= base_url('images/landing/home/puntos.svg') ?>" alt="">
+                </figure>
+            </div>
             <div class=" container">
                 <h2 class=" lg:text-[28px] text-[24px] font-poppins font-black uppercase leading-[140%] text-white text-center">¿Por qué elegirnos para la ventilación de tu empresa?</h2>
                 <div class=" flex items-center justify-center lg:gap-x-[124px] lg:flex-row flex-col lg:mt-20 mt-10">
@@ -434,6 +450,11 @@ $company = setting()->get('App.general', 'company');
         </div>
     </section>
     <section class="relative">
+        <div class=" absolute z-20 lg:top-48 lg:block hidden left-6 lg:left-10">
+            <figure>
+                <img class=" w-auto lg:h-[370px] h-[220px]" src="<?= base_url('images/landing/home/puntos.svg') ?>" alt="">
+            </figure>
+        </div>
         <div class=" relative lg:mt-[91px]">
             <figure>
                 <img class=" w-full bg-cover object-cover lg:h-[1050px] h-[1250px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/fondo-azul.webp') ?>" alt="">
