@@ -28,6 +28,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Gordita', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+
       },
       fontSize: {
         'H1': ['36px', {
