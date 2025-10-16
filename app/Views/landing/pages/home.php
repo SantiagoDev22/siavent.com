@@ -383,69 +383,151 @@ $company = setting()->get('App.general', 'company');
 
             </div>
         </div>
-        <style>
-            @keyframes scrollInfinite {
-                0% {
-                    transform: translateX(0);
-                }
-
-                100% {
-                    transform: translateX(-50%);
-                }
-            }
-        </style>
 
         <div class="relative overflow-hidden w-full bg-white lg:mt-20 mt-[60px]">
-            <div class="flex animate-[scrollInfinite_50s_linear_infinite] w-[300%] lg:w-[200%]">
-                <!-- 🔁 Duplicamos las imágenes para lograr el bucle infinito -->
-                <div class="flex gap-x-10 items-center justify-around w-1/2">
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/greenheck.webp') ?>" alt="">
-                    </figure>
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/carrier.webp') ?>" alt="">
-                    </figure>
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/mirage.webp') ?>" alt="">
-                    </figure>
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/sp.webp') ?>" alt="">
-                    </figure>
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/vermont.webp') ?>" alt="">
-                    </figure>
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/trane.webp') ?>" alt="">
-                    </figure>
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/york.webp') ?>" alt="">
-                    </figure>
+            <div class="flex ">
+                <!-- CONTENEDOR PRINCIPAL -->
+                <div class="w-full">
+                    <!-- DESKTOP/LG+ : Carrusel infinito (animación) -->
+                    <div class="hidden lg:block relative overflow-hidden">
+                        <div class="carousel-track flex items-center gap-x-6 will-change-transform">
+                            <!-- --- SET ORIGINAL --- -->
+                            <figure class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/greenheck.webp') ?>" alt="">
+                            </figure>
+                            <figure class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/carrier.webp') ?>" alt="">
+                            </figure>
+                            <figure class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/mirage.webp') ?>" alt="">
+                            </figure>
+                            <figure class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/sp.webp') ?>" alt="">
+                            </figure>
+                            <figure class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/vermont.webp') ?>" alt="">
+                            </figure>
+                            <figure class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/trane.webp') ?>" alt="">
+                            </figure>
+                            <figure class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/york.webp') ?>" alt="">
+                            </figure>
+
+                            <!-- --- DUPLICADO (para que no se note salto al llegar al final) --- -->
+                            <figure aria-hidden="true" class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/greenheck.webp') ?>" alt="">
+                            </figure>
+                            <figure aria-hidden="true" class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/carrier.webp') ?>" alt="">
+                            </figure>
+                            <figure aria-hidden="true" class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/mirage.webp') ?>" alt="">
+                            </figure>
+                            <figure aria-hidden="true" class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/sp.webp') ?>" alt="">
+                            </figure>
+                            <figure aria-hidden="true" class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/vermont.webp') ?>" alt="">
+                            </figure>
+                            <figure aria-hidden="true" class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/trane.webp') ?>" alt="">
+                            </figure>
+                            <figure aria-hidden="true" class="flex-shrink-0 min-w-[150px]">
+                                <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/york.webp') ?>" alt="">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- MOBILE/SMALL : Scroll horizontal libre (touch friendly) -->
+                    <div class="lg:hidden">
+                        <div class="overflow-x-auto no-scrollbar py-2">
+                            <div class="flex gap-x-6 items-center px-4">
+                                <figure class="flex-shrink-0 min-w-[120px]">
+                                    <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/greenheck.webp') ?>" alt="">
+                                </figure>
+                                <figure class="flex-shrink-0 min-w-[120px]">
+                                    <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/carrier.webp') ?>" alt="">
+                                </figure>
+                                <figure class="flex-shrink-0 min-w-[120px]">
+                                    <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/mirage.webp') ?>" alt="">
+                                </figure>
+                                <figure class="flex-shrink-0 min-w-[120px]">
+                                    <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/sp.webp') ?>" alt="">
+                                </figure>
+                                <figure class="flex-shrink-0 min-w-[120px]">
+                                    <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/vermont.webp') ?>" alt="">
+                                </figure>
+                                <figure class="flex-shrink-0 min-w-[120px]">
+                                    <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/trane.webp') ?>" alt="">
+                                </figure>
+                                <figure class="flex-shrink-0 min-w-[120px]">
+                                    <img class="w-auto max-h-[87px] object-contain" src="<?= base_url('images/landing/home/york.webp') ?>" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- 🔁 Segunda copia para que parezca continuo -->
-                <div class="flex gap-x-10 items-center justify-around w-1/2">
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/greenheck.webp') ?>" alt="">
-                    </figure>
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/carrier.webp') ?>" alt="">
-                    </figure>
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/mirage.webp') ?>" alt="">
-                    </figure>
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/sp.webp') ?>" alt="">
-                    </figure>
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/vermont.webp') ?>" alt="">
-                    </figure>
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/trane.webp') ?>" alt="">
-                    </figure>
-                    <figure class=" flex-shrink-0">
-                        <img class="w-auto h-[87px]" src="<?= base_url('images/landing/home/york.webp') ?>" alt="">
-                    </figure>
-                </div>
+                <!-- CSS adicional -->
+                <style>
+                    /* Animación infinite (lg+) */
+                    @keyframes scrollInfinite {
+                        0% {
+                            transform: translateX(0);
+                        }
+
+                        100% {
+                            transform: translateX(-50%);
+                        }
+
+                        /* -50% porque duplicamos el set */
+                    }
+
+                    /* Track del carrusel en desktop */
+                    .carousel-track {
+                        width: max-content;
+                        /* se ajusta al contenido */
+                        animation: scrollInfinite 28s linear infinite;
+                        gap: 24px;
+                    }
+
+                    /* Pausa al hover (útil en desktop) */
+                    .carousel-track:hover {
+                        animation-play-state: paused;
+                    }
+
+                    /* Ocultar scrollbar en móviles (soporta Webkit + Firefox) */
+                    .no-scrollbar {
+                        -ms-overflow-style: none;
+                        /* IE and Edge */
+                        scrollbar-width: none;
+                        /* Firefox */
+                    }
+
+                    .no-scrollbar::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    /* Chrome, Safari, Opera */
+
+                    /* Ajustes de min-width para evitar que se encimen imágenes al reducir */
+                    @media (min-width: 1024px) {
+
+                        /* en lg+ dejamos min-w un poco más grande para mejor separación */
+                        .carousel-track figure {
+                            min-width: 150px;
+                        }
+                    }
+
+                    @media (max-width: 1023px) {
+                        .carousel-track figure {
+                            min-width: 120px;
+                        }
+                    }
+                </style>
+
+
             </div>
         </div>
     </section>
