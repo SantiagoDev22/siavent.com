@@ -44,12 +44,7 @@ $company = setting()->get('App.general', 'company');
 
 
         </div>
-        <div class="absolute bottom-0 right-14 z-10">
-            <figure>
-                <img class="w-[160px] bg-cover bg-no-repeat object-scale-down" width="0" height="0"
-                    src="<?= base_url('images/default/c_rculoss.webp') ?>" loading="lazy" alt="circulos decorativos">
-            </figure>
-        </div>
+
     </section>
 
     <section class=" relative">
