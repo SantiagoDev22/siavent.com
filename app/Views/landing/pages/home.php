@@ -264,22 +264,22 @@ $company = setting()->get('App.general', 'company');
                 </div>
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
                     <figure>
-                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-1.svg') ?>" alt="">
+                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-2.svg') ?>" alt="">
                     </figure>
                 </div>
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
                     <figure>
-                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-1.svg') ?>" alt="">
+                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-3.svg') ?>" alt="">
                     </figure>
                 </div>
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
                     <figure>
-                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-1.svg') ?>" alt="">
+                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-4.svg') ?>" alt="">
                     </figure>
                 </div>
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
                     <figure>
-                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-1.svg') ?>" alt="">
+                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-5.svg') ?>" alt="">
                     </figure>
                 </div>
             </div>
