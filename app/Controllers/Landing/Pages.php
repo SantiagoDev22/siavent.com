@@ -64,7 +64,8 @@ class Pages extends BaseController
             'name'    => 'required|max_length[64]|string',
             'email'   => 'required|max_length[256]|valid_email',
             'phone'   => 'required|max_length[15]|decimal',
-            'date'    => 'required|valid_date[Y-m-d]',
+            // Validamos que el estado provenga de la tabla states y esté activo
+            'estados' => 'required|is_not_unique[estados.id]',
         ])) {
 
             if (!$this->validateData(
@@ -77,8 +78,7 @@ class Pages extends BaseController
             $prospectModel = model('ProspectsModel');
 
             $message = trimAll($this->request->getPost('message'));
-            $date = $this->request->getPost('date');
-
+            // Nota: 'date' ya no se espera desde el formulario, se elimina
 
             // Registra un nuevo prospecto.
             $datainsert = [
@@ -86,12 +86,12 @@ class Pages extends BaseController
                 'email'      => lowerCase(trim($this->request->getPost('email'))),
                 'phone'      => stripAllSpaces($this->request->getPost('phone')),
                 'landing_id' => $this->request->getPost('origin'),
-                'date'       => $date, // Aquí lo agregas
-
+                'state_id'   => $this->request->getPost('estados'),
+                'message'    => $message,
+                'observations' => stripAllSpaces($this->request->getPost('empresa')),
             ];
-            
+
             // Insertar los datos en la tabla
-            $prospectModel = model('ProspectsModel');
             $prospectModel->transStart();
             $prospectModel->insert($datainsert);
             $prospectModel->transComplete();
@@ -99,7 +99,7 @@ class Pages extends BaseController
                 $stateModel   = model('StatesModel');
                 $landingModel = model('LandingsModel');
 
-
+                $estado = $stateModel->select('id,name')->where('id', $datainsert['state_id'])->first();
                 $landing = $landingModel->select('id, slug,name, other, title')->where('id', $datainsert['landing_id'])->first();
 
                 $email = service('email');
@@ -116,6 +116,7 @@ class Pages extends BaseController
                 $email->setMessage(view('backend/emails/prospect', [
                     'prospect' => $datainsert,
                     'landing'  => $landing,
+                    'state'    => $estado,
                 ]));
 
                 if ($email->send()) {

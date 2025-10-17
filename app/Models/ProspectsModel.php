@@ -29,6 +29,7 @@ class ProspectsModel extends Model
         'state_id',
         'observations',
         'response',
+        'message',
         'landing_id',
     ];
     protected bool $allowEmptyInserts = true;

@@ -53,7 +53,10 @@
         <span>Teléfono:</span> <?= esc($prospect['phone']) ?>
     </p>
     <p>
-        <span>Fecha del evento:</span> <?= esc($prospect['date']) ?>
+        <span>Estado:</span> <?= esc($state['name']) ?>
+    </p>
+    <p>
+        <span>Empresa:</span> <?= esc($prospect['observations']) ?>
     </p>
 
     <p>
