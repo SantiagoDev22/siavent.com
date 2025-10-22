@@ -347,7 +347,7 @@
                 event.preventDefault();
                 const button = target.closest('.btn-add-bullet-to-section');
                 const sectionIndex = button.dataset.sectionIndex;
-                if sectionIndex !== undefined) {
+                if (sectionIndex !== undefined) {
                     addBulletToSection(sectionIndex);
                 }
             }
@@ -418,7 +418,7 @@
             }
         });
 
-        });
+    });
 </script>
 
 <?= $this->endSection() ?>
