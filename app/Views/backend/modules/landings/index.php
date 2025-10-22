@@ -147,7 +147,7 @@ use CodeIgniter\I18n\Time;
                     <tr>
                         <th><?= esc(Time::parse($landing['created_at'])->toDateString()) ?></th>
                         <td class="font-medium"><?= esc($landing['title']) ?></td>
-                        <td><a href="<?= ENVIRONMENT === 'production' ? single_service('uri', 'https://oneventos.mx/')->setPath($landing['slug'])
+                        <td><a href="<?= ENVIRONMENT === 'production' ? single_service('uri', 'https://siavent.com/')->setPath($landing['slug'])
                             : url_to('landing.pages.index', $landing['slug']) ?>" target="_blank" class="link link-hover"><?= esc($landing['name']) ?></a></td>
                         <td>
                             <div class="flex justify-center items-center gap-2 ">
