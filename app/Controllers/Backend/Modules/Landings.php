@@ -209,7 +209,7 @@ class Landings extends BaseController
             'title'    => 'required|max_length[250]|string',
             'subtitle' => 'required|max_length[250]|string',
             'cover'    => 'uploaded[cover]|max_size[cover,5120]|is_image[cover]',
-            'other'    => 'required|string|max_length[256]',
+            'other'    => 'permit_empty|string|max_length[256]',
             'phone'    => 'permit_empty|min_length[10]|max_length[10]',
         ];
 

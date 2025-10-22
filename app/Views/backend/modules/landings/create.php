@@ -100,9 +100,9 @@
                     
                     <div class="divider">Sección Dos</div>
                     <div class="col-span-full">
-                        <label for="other" class="block mb-2 text-sm font-medium text-gray-900">Título Cintillo<small class="text-error">*</small></label>
+                        <label for="other" class="block mb-2 text-sm font-medium text-gray-900">Título Cintillo</label>
                         <input type="text" name="other" id="other" value="<?= set_value('other') ?>"
-                            placeholder="Escribe un titulo Cintillo" required
+                            placeholder="Escribe un titulo Cintillo"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                         <label class="label text-sm"><span class="label-text-alt text-error"><?= validation_show_error('other') ?></span></label>
                     </div>
@@ -347,7 +347,7 @@
                 event.preventDefault();
                 const button = target.closest('.btn-add-bullet-to-section');
                 const sectionIndex = button.dataset.sectionIndex;
-                if (sectionIndex !== undefined) {
+                if sectionIndex !== undefined) {
                     addBulletToSection(sectionIndex);
                 }
             }
