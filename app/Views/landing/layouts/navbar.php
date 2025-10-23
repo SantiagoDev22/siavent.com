@@ -12,12 +12,8 @@
                 <a href="" class=" px-[20px] py-[10px] rounded-[25px] bg-[#E73636] hover:bg-[#032039] text-white font-poppins text-xl font-medium">Solicita tu cotización</a>
             </nav>
 
-            <!-- BOTÓN HAMBURGUESA -->
-            <button id="menu-btn" class="md:hidden flex flex-col space-y-1 focus:outline-none">
-                <span class="w-6 h-0.5 bg-gray-800"></span>
-                <span class="w-6 h-0.5 bg-gray-800"></span>
-                <span class="w-6 h-0.5 bg-gray-800"></span>
-            </button>
+            <a href="tel:7226480074" class=" lg:text-[22px] font-semibold text-white md:hidden block font-poppins">Llámanos 722 648 0074</a>
+
         </div>
     </div>
 
@@ -31,6 +27,8 @@
         </nav>
     </div>
 </header>
+
+
 
 <script>
     const header = document.getElementById('site-header');
