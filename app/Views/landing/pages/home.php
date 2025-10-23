@@ -278,29 +278,44 @@ $company = setting()->get('App.general', 'company');
 
             <div class=" grid xl:grid-col-5 lg:grid-cols-5 grid-cols-2 lg:mt-[125px] mt-[50px] gap-y-3 gap-x-3 lg:pb-[115px] pb-[75px]">
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
-                    <figure>
-                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-1.svg') ?>" alt="">
-                    </figure>
+                    <div class="bg-[#093B57] rounded-[20px] lg:rounded-[40px] py-4 w-full h-full justify-center items-center flex flex-col text-center">
+                        <figure>
+                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-1.svg') ?>" alt="">
+                        </figure>
+                        <div class="w-full text-center justify-start"><span class="text-white text-base font-black leading-snug">Ayudando a más <br> de</span> <span class="text-rose-500 text-base font-black leading-snug">150 empresas</span></div>
+                    </div>
                 </div>
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
-                    <figure>
-                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-2.svg') ?>" alt="">
-                    </figure>
+                    <div class="bg-[#093B57] rounded-[20px] lg:rounded-[40px] py-4 w-full h-full justify-center items-center flex flex-col text-center">
+                        <figure>
+                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-2.svg') ?>" alt="">
+                        </figure>
+                        <div class="w-full text-center justify-start"><span class="text-rose-500 text-base font-black leading-snug">+30 años </span><span class="text-white text-base font-black leading-snug">de <br> experiencia</span></div>
+                    </div>
                 </div>
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
-                    <figure>
-                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-3.svg') ?>" alt="">
-                    </figure>
+                    <div class="bg-[#093B57] rounded-[20px] lg:rounded-[40px] py-4 w-full h-full justify-center items-center flex flex-col text-center">
+                        <figure>
+                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-3.svg') ?>" alt="">
+                        </figure>
+                        <div class="w-full text-center justify-start"><span class="text-rose-500 text-base font-black leading-snug">Calidad </span><br><span class="text-white text-base font-black leading-snug">Garantizada</span></div>
+                    </div>
                 </div>
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
-                    <figure>
-                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-4.svg') ?>" alt="">
-                    </figure>
+                    <div class="bg-[#093B57] rounded-[20px] lg:rounded-[40px] py-4 w-full h-full justify-center items-center flex flex-col text-center">
+                        <figure>
+                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-4.svg') ?>" alt="">
+                        </figure>
+                        <div class="w-full text-center justify-start"><span class="text-rose-500 text-base font-black leading-snug">Tecnología de </span><br><span class="text-white text-base font-black leading-snug">vanguardia</span></div>
+                    </div>
                 </div>
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
-                    <figure>
-                        <img class=" h-[146px] bg-[#093B57] rounded-[20px] lg:rounded-[40px] w-full lg:h-[176px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-5.svg') ?>" alt="">
-                    </figure>
+                    <div class="bg-[#093B57] rounded-[20px] lg:rounded-[40px] py-4 w-full h-full justify-center items-center flex flex-col text-center">
+                        <figure>
+                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-5.svg') ?>" alt="">
+                        </figure>
+                        <div class="w-full text-center justify-start"><span class="text-rose-500 text-base font-black leading-snug">Sistemas </span><br><span class="text-white text-base font-black leading-snug">eficientes</span></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -569,20 +584,20 @@ $company = setting()->get('App.general', 'company');
         </div>
     </section>
     <section class="relative">
-        <div class=" absolute z-20 lg:top-48 lg:block hidden left-6 lg:left-10">
+        <div class=" absolute z-20 lg:top-16 lg:block hidden left-6 lg:left-10">
             <figure>
-                <img class=" w-auto lg:h-[370px] h-[220px]" src="<?= base_url('images/landing/home/puntos.svg') ?>" alt="">
+                <img class=" w-auto lg:h-[302px] h-[220px]" src="<?= base_url('images/landing/home/puntos.svg') ?>" alt="">
             </figure>
         </div>
         <div class=" relative lg:mt-[91px]">
             <figure>
-                <img class=" w-full bg-cover object-cover lg:h-[1050px] h-[1250px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/fondo-azul.webp') ?>" alt="">
+                <img class=" w-full lg:h-screen h-[1250px] bg-cover object-cover lg:object-fill" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/fondo-azul.webp') ?>" alt="">
             </figure>
         </div>
         <?= form_open(url_to('landing.pages.prospects'), ['id' => 'form-contact', 'onsubmit' => 'document.getElementById("loading_icon").classList.remove("hidden")']) ?>
             <input type="hidden" name="origin" value="<?= esc($landing['id'] ?? 'default_landing_id') ?>">
-            <div id="form" class=" absolute inset-0 flex items-center justify-center mt-32">
-                <div class=" flex items-center lg:flex-row flex-col container justify-center lg:gap-x-[56px] lg:pt-0 pt-[160px]">
+            <div id="form" class=" absolute inset-0 flex items-center justify-center my-20">
+                <div class="flex items-center lg:flex-row flex-col container justify-center lg:mt-24 lg:gap-x-[56px] lg:pt-0 pt-32 ">
                     <div class=" flex flex-col items-start">
                         <figure>
                             <img src="<?= base_url('images/landing/home/logo.svg') ?>" alt="">
@@ -628,7 +643,7 @@ $company = setting()->get('App.general', 'company');
                                     </svg>
 
                                 </figure>
-                                <input type="tel" name="phone" id="phone" class=" rounded-[24px] w-full text-base text-[#093B57] placeholder:text-base placeholder:text-[#093B57] placeholder:font-medium px-[16px] py-[9px]" required placeholder="Teléfono">
+                                <input type="tel" name="phone" id="phone" class=" rounded-[24px] w-full text-base text-[#093B57] placeholder:text-base placeholder:text-[#093B57] placeholder:font-medium px-[16px] py-[9px]" required placeholder="Teléfono" pattern="\d{10}" title="El número debe contener exactamente 10 dígitos" maxlength="10" minlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                             </div>
                             <div class=" flex items-center gap-x-5 justify-center w-full mt-5">
                                 <figure>
