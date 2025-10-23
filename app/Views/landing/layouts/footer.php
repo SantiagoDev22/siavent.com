@@ -5,7 +5,7 @@
                 <img class=" w-auto h-[50px] lg:h-[61px]" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/logo.svg') ?>" alt="">
             </figure>
             <div class=" w-full lg:w-[3px] h-[3px] lg:h-[160px] bg-white"></div>
-            <div class=" flex flex-col gap-y-2 lg:text-start gap-y-2 text-center lg:gap-y-14">
+            <div class=" flex flex-col gap-y-2 lg:text-start text-center lg:gap-y-14">
                 <a href="https://g.co/kgs/Sf4kyyN" target="_blank">Blvd. Bernardo Quintana 7001 Torre || Suite <br>
                     915, Centro Sur, Querétaro, Qro.</a>
                 <div class=" flex flex-col">

@@ -9,7 +9,7 @@
             <!-- NAV LINKS -->
             <nav class="hidden md:flex items-center space-x-8 text-[15px] font-medium text-gray-700">
                 <a href="tel:7226480074" class=" lg:text-[22px] font-semibold text-white font-poppins">Llámanos 722 648 0074</a>
-                <a href="" class=" px-[20px] py-[10px] rounded-[25px] bg-[#E73636] hover:bg-[#032039] text-white font-poppins text-xl font-medium">Solicita tu cotización</a>
+                <a href="#form" class=" px-[20px] py-[10px] rounded-[25px] bg-[#E73636] hover:bg-[#032039] text-white font-poppins text-xl font-medium">Solicita tu cotización</a>
             </nav>
 
             <a href="tel:7226480074" class=" lg:text-[22px] font-semibold text-white md:hidden block font-poppins">Llámanos 722 648 0074</a>
