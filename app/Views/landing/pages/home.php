@@ -36,10 +36,10 @@ $company = setting()->get('App.general', 'company');
             <figure>
                 <!-- Semitransparent overlay -->
                 <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-                <video class="w-full lg:h-[925px] h-[825px] bg-cover bg-no-repeat object-cover" autoplay loop muted>
-                    <source src="<?= base_url('images/videos/siavent.mp4') ?>" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                    <video class="w-full lg:h-[925px] h-[825px] bg-cover bg-no-repeat object-cover" autoplay loop muted>
+                        <source src="<?= base_url('images/videos/siavent.mp4') ?>" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 <!-- Added image -->
                 <img class="absolute bottom-0 w-full" src="<?= base_url('images/landing/elements/marco.png') ?>" alt="Decorative Frame">
             </figure>
@@ -52,8 +52,6 @@ $company = setting()->get('App.general', 'company');
                 <?= esc($landing['subtitle']) ?>
             </h2>
             <a href="#form" class=" px-[20px] py-[10px] mt-10 rounded-[25px] bg-[#E73636] hover:bg-[#032039] text-white font-poppins text-xl font-medium">Cotiza Ahora</a>
-
-
         </div>
 
     </section>
