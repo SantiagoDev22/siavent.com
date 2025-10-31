@@ -32,9 +32,16 @@ $company = setting()->get('App.general', 'company');
                 <img class=" w-auto lg:h-[370px] h-[220px]" src="<?= base_url('images/landing/home/puntos.svg') ?>" alt="">
             </figure>
         </div>
-        <div class=" relative z-10">
+        <div class="relative z-10">
             <figure>
-                <img class=" w-full lg:h-[925px] h-[825px] bg-cover bg-no-repeat object-cover" width="0" height="0" src="<?= base_url('images/landing/covers/1760499527_8dbe01b934c7dd535f20.webp') ?>" alt="<?= esc($landing['title']) ?>">
+                <!-- Semitransparent overlay -->
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <video class="w-full lg:h-[925px] h-[825px] bg-cover bg-no-repeat object-cover" autoplay loop muted>
+                    <source src="<?= base_url('images/videos/siavent.mp4') ?>" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Added image -->
+                <img class="absolute bottom-0 w-full" src="<?= base_url('images/landing/elements/marco.png') ?>" alt="Decorative Frame">
             </figure>
         </div>
         <div class=" absolute flex items-start container z-20 flex-col justify-center inset-0">
@@ -280,7 +287,7 @@ $company = setting()->get('App.general', 'company');
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
                     <div class="bg-[#093B57] rounded-[20px] lg:rounded-[40px] py-4 w-full h-full justify-center items-center flex flex-col text-center">
                         <figure>
-                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-1.svg') ?>" alt="">
+                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/elements/Edificios.gif') ?>" alt="">
                         </figure>
                         <div class="w-full text-center justify-start"><span class="text-white text-base font-black leading-snug">Ayudando a más <br> de</span> <span class="text-rose-500 text-base font-black leading-snug">150 empresas</span></div>
                     </div>
@@ -288,7 +295,7 @@ $company = setting()->get('App.general', 'company');
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
                     <div class="bg-[#093B57] rounded-[20px] lg:rounded-[40px] py-4 w-full h-full justify-center items-center flex flex-col text-center">
                         <figure>
-                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-2.svg') ?>" alt="">
+                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/elements/Garantia_02.gif') ?>" alt="">
                         </figure>
                         <div class="w-full text-center justify-start"><span class="text-rose-500 text-base font-black leading-snug">+30 años </span><span class="text-white text-base font-black leading-snug">de <br> experiencia</span></div>
                     </div>
@@ -296,7 +303,7 @@ $company = setting()->get('App.general', 'company');
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
                     <div class="bg-[#093B57] rounded-[20px] lg:rounded-[40px] py-4 w-full h-full justify-center items-center flex flex-col text-center">
                         <figure>
-                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-3.svg') ?>" alt="">
+                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/elements/Garantia.gif') ?>" alt="">
                         </figure>
                         <div class="w-full text-center justify-start"><span class="text-rose-500 text-base font-black leading-snug">Calidad </span><br><span class="text-white text-base font-black leading-snug">Garantizada</span></div>
                     </div>
@@ -304,7 +311,7 @@ $company = setting()->get('App.general', 'company');
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
                     <div class="bg-[#093B57] rounded-[20px] lg:rounded-[40px] py-4 w-full h-full justify-center items-center flex flex-col text-center">
                         <figure>
-                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-4.svg') ?>" alt="">
+                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/elements/Aire-Acondicionado.gif') ?>" alt="">
                         </figure>
                         <div class="w-full text-center justify-start"><span class="text-rose-500 text-base font-black leading-snug">Tecnología de </span><br><span class="text-white text-base font-black leading-snug">vanguardia</span></div>
                     </div>
@@ -312,7 +319,7 @@ $company = setting()->get('App.general', 'company');
                 <div class=" shadow-md rounded-[20px] lg:rounded-[40px] border-white border-[10px]">
                     <div class="bg-[#093B57] rounded-[20px] lg:rounded-[40px] py-4 w-full h-full justify-center items-center flex flex-col text-center">
                         <figure>
-                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/home/box-5.svg') ?>" alt="">
+                            <img class=" w-16 h-16" width="0" height="0" loading="lazy" src="<?= base_url('images/landing/elements/Aire-Acondicionado_02.gif') ?>" alt="">
                         </figure>
                         <div class="w-full text-center justify-start"><span class="text-rose-500 text-base font-black leading-snug">Sistemas </span><br><span class="text-white text-base font-black leading-snug">eficientes</span></div>
                     </div>
