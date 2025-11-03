@@ -21,19 +21,55 @@
             const inputBCC = document.querySelector('#bcc');
             const form = document.querySelector('form');
 
+            // RegExp simple pero suficiente para validar emails individuales
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Limpia y normaliza una cadena de correos separados por comas
+            function cleanEmails(value) {
+                return value
+                    .split(',')
+                    .map(s => s.trim())
+                    .filter(Boolean)
+                    .join(',');
+            }
+
+            // Valida una cadena que puede contener uno o varios emails separados por comas
+            function validateEmailsString(value, required = false) {
+                const trimmed = value.trim();
+                if (trimmed === '') {
+                    return !required; // válido si no es obligatorio y está vacío
+                }
+                const parts = trimmed.split(',').map(p => p.trim()).filter(Boolean);
+                if (parts.length === 0) return !required;
+                for (const p of parts) {
+                    if (!emailRegex.test(p)) return false;
+                }
+                return true;
+            }
+
+            // Establece mensaje de error apropiado en el input
+            function setEmailValidity(input, required = false) {
+                const v = input.value;
+                if (v.trim() === '' && required) {
+                    input.setCustomValidity('Este campo es obligatorio.');
+                    return false;
+                }
+                if (!validateEmailsString(v, required)) {
+                    input.setCustomValidity('Introduce una o varias direcciones de correo válidas separadas por coma. Ej: email@mail.com, email2@mail.com');
+                    return false;
+                }
+                input.setCustomValidity('');
+                return true;
+            }
+
             // Función para habilitar los campos y cambiar el botón a "Guardar"
             function enableEditMode() {
-                inputCC.disabled = false;
-                inputCC.classList.remove('bg-gray-50', 'border-gray-300'); // Quita estilos de deshabilitado
-                inputCC.classList.add('bg-white', 'border-blue-500', 'focus:ring-blue-500', 'focus:border-blue-500');
+                [inputTo, inputCC, inputBCC].forEach(input => {
+                    input.disabled = false;
+                    input.classList.remove('bg-gray-50', 'border-gray-300'); // Quita estilos de deshabilitado
+                    input.classList.add('bg-white', 'border-blue-500', 'focus:ring-blue-500', 'focus:border-blue-500');
+                });
 
-                inputBCC.disabled = false;
-                inputBCC.classList.remove('bg-gray-50', 'border-gray-300'); // Quita estilos de deshabilitado
-                inputBCC.classList.add('bg-white', 'border-blue-500', 'focus:ring-blue-500', 'focus:border-blue-500');
-
-                inputTo.disabled = false;
-                inputTo.classList.remove('bg-gray-50', 'border-gray-300'); // Quita estilos de deshabilitado
-                inputTo.classList.add('bg-white', 'border-blue-500', 'focus:ring-blue-500', 'focus:border-blue-500');
                 inputTo.focus();
 
                 btnEditar.value = 'Guardar';
@@ -48,28 +84,47 @@
             // Función para enviar el formulario
             function submitForm(event) {
                 event.preventDefault();
-                if (form.checkValidity()) {
-                    form.submit();
-                } else {
-                    // Disparar la validación HTML5
-                    form.reportValidity();
+
+                // Validar cada campo: 'to' es requerido, cc y bcc no necesariamente
+                const vTo = setEmailValidity(inputTo, true);
+                const vCc = setEmailValidity(inputCC, false);
+                const vBcc = setEmailValidity(inputBCC, false);
+
+                // Mostrar mensajes nativos si algo falla
+                if (!vTo) {
+                    inputTo.reportValidity();
+                    return;
                 }
+                if (!vCc) {
+                    inputCC.reportValidity();
+                    return;
+                }
+                if (!vBcc) {
+                    inputBCC.reportValidity();
+                    return;
+                }
+
+                // Normalizar valores antes de enviar (quitar espacios innecesarios)
+                inputTo.value = cleanEmails(inputTo.value);
+                inputCC.value = cleanEmails(inputCC.value);
+                inputBCC.value = cleanEmails(inputBCC.value);
+
+                // Enviar formulario
+                form.submit();
             }
 
             // Escuchar el evento de click en el botón "Editar"
             btnEditar.addEventListener('click', enableEditMode);
 
             // Agregar validación en tiempo real para los campos de correo electrónico
-            [inputTo, inputCC, inputBCC].forEach(input => {
+            [inputTo, inputCC, inputBCC].forEach((input, idx) => {
+                const required = (input === inputTo); // solo "to" es requerido en el formulario
                 input.addEventListener('input', function() {
-                    if (this.value === '') {
-                        this.setCustomValidity('Este campo es obligatorio.');
-                    } else if (!this.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
-                        this.setCustomValidity('Por favor, introduce una dirección de correo electrónico válida.');
-                    } else {
-                        this.setCustomValidity('');
-                    }
-                    this.reportValidity();
+                    setEmailValidity(this, required);
+                });
+                // limpiar al perder foco (normalizar)
+                input.addEventListener('blur', function() {
+                    this.value = cleanEmails(this.value);
                 });
             });
         });

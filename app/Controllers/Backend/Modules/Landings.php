@@ -208,7 +208,7 @@ class Landings extends BaseController
             'name'     => 'required|min_length[3]|max_length[250]|string',
             'title'    => 'required|max_length[250]|string',
             'subtitle' => 'required|max_length[250]|string',
-            'cover'    => 'uploaded[cover]|max_size[cover,5120]|is_image[cover]',
+            'cover'    => 'permit_empty|uploaded[cover]|max_size[cover,5120]|is_image[cover]',
             'other'    => 'permit_empty|string|max_length[256]',
             'phone'    => 'permit_empty|min_length[10]|max_length[10]',
         ];
@@ -603,7 +603,7 @@ class Landings extends BaseController
                 'name'     => 'required|min_length[3]|max_length[250]|string',
                 'title'    => 'required|max_length[250]|string',
                 'subtitle' => 'permit_empty|max_length[250]|string', // Permitir vacío si es opcional
-                'cover'    => 'uploaded[cover]|max_size[cover,4096]|is_image[cover]',
+                'cover'    => 'permit_empty|uploaded[cover]|max_size[cover,4096]|is_image[cover]',
                 'other'    => 'permit_empty|string|max_length[256]',
                 'phone'    => 'permit_empty|max_length[20]',
             ];
