@@ -88,7 +88,7 @@
                                 <div class="mt-4 flex flex-col text-sm leading-6 text-gray-600" id="text-alternate-cover">
                                     <label for="cover" class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
                                         <span>Upload a file</span>
-                                        <input id="cover" name="cover" required type="file" accept="image/*" class="sr-only" onchange="previewImage(event, 'cover');">
+                                        <input id="cover" name="cover" type="file" accept="image/*" class="sr-only" onchange="previewImage(event, 'cover');">
                                     </label>
                                     <p class="pl-1">or drag and drop</p>
                                     <p class="text-xs leading-5 text-gray-600">PNG, JPG, up to 1MB</p>

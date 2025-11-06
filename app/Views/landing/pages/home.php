@@ -702,7 +702,7 @@ $company = setting()->get('App.general', 'company');
                             </figure>
                             <textarea name="" id="" class="rounded-[24px] w-full text-base text-[#093B57] resize-none placeholder:text-base placeholder:text-[#093B57] placeholder:font-medium px-[16px] py-[9px]"></textarea>
                         </div>
-                        <div class="mt-6 text-center lg:w-[88%] ml-auto ">
+                        <div class="mt-6 text-center w-full lg:w-[88%] lg:ml-auto ">
                             <button type="submit" class="px-[20px] py-[10px] w-full rounded-[25px] text-center mt-10 transition-all ease-in-out duration-300 bg-[#E73636] hover:text-[#E73636] hover:bg-white text-white font-poppins font-medium text-xl flex items-center justify-center">
                                 <svg id="loading_icon" class="hidden animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
