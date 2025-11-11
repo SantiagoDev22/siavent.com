@@ -70,30 +70,15 @@ use CodeIgniter\I18n\Time;
                                     placeholder="e.g. San Francisco" required="">
                                 </div>
                                 <?php endif; ?>
-
-                                <?php if(!empty($prospect['street'])): ?>
-                                <div class="col-span-6 sm:col-span-3">
-                                    <label for="address" class="block mb-2 text-sm font-medium text-gray-800">Address</label>
-                                    <input type="text" name="address" id="address" value="<?= esc($prospect['street']) ?>" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " 
-                                    placeholder="e.g. California" required="">
-                                </div>
-                                <?php endif; ?>
                                 
-                                <?php if(!empty($prospect['date'])): ?>
-                                <div class="col-span-6 sm:col-span-3">
-                                    <label for="address" class="block mb-2 text-sm font-medium text-gray-800">Fecha del Evento</label>
-                                    <input type="text" name="address" id="address" value="<?= esc($prospect['date']) ?>" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " 
-                                    placeholder="e.g. California" required="">
-                                </div>
+                                <?php if(!empty($prospect['observations'])): ?>
+                                    <div class="col-span-6 sm:col-span-3">
+                                        <label for="observations" class="block mb-2 text-sm font-medium text-gray-800">Empresa</label>
+                                        <input type="text" name="observations" id="observations" value="<?= esc($prospect['observations']) ?>" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " 
+                                        placeholder="e.g. Empresa" required="">
+                                    </div>
                                 <?php endif; ?>
 
-                                <?php if(!empty($prospect['code_zip'])): ?>
-                                <div class="col-span-6 sm:col-span-3">
-                                    <label for="code_zip" class="block mb-2 text-sm font-medium text-gray-800">Zip Code</label>
-                                    <input type="text" name="code_zip" id="code_zip" value="<?= esc($prospect['code_zip']) ?>" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " 
-                                    placeholder="Zip Code" required="">
-                                </div>
-                                <?php endif; ?>
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="message" class="block mb-2 text-sm font-medium text-gray-800">Observaciones</label>
                                     <input type="text" name="message" id="message" value="<?= esc($prospect['message']) ?>" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " 

@@ -58,6 +58,9 @@
     <p>
         <span>Empresa:</span> <?= esc($prospect['observations']) ?>
     </p>
+    <p>
+        <span>Mensaje:</span> <?= esc($prospect['message']) ?>
+    </p>
 
     <p>
         <span>Origen Landing:</span> <?= esc($landing['name']) ?>

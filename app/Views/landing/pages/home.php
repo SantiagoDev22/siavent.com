@@ -700,7 +700,7 @@ $company = setting()->get('App.general', 'company');
                                     </defs>
                                 </svg>
                             </figure>
-                            <textarea name="" id="" class="rounded-[24px] w-full text-base text-[#093B57] resize-none placeholder:text-base placeholder:text-[#093B57] placeholder:font-medium px-[16px] py-[9px]"></textarea>
+                            <textarea name="message" id="message" placeholder="Escribe tu mensaje aqui..." class="rounded-[24px] w-full text-base text-[#093B57] resize-none placeholder:text-base placeholder:text-[#093B57] placeholder:font-medium px-[16px] py-[9px]"></textarea>
                         </div>
                         <div class="mt-6 text-center w-full lg:w-[88%] lg:ml-auto ">
                             <button type="submit" class="px-[20px] py-[10px] w-full rounded-[25px] text-center mt-10 transition-all ease-in-out duration-300 bg-[#E73636] hover:text-[#E73636] hover:bg-white text-white font-poppins font-medium text-xl flex items-center justify-center">

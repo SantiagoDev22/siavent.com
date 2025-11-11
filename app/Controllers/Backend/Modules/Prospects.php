@@ -337,25 +337,10 @@ class Prospects extends BaseController
             // Maneja el caso en que no se encuentra el prospecto.
             throw PageNotFoundException::forPageNotFound();
         }
-
-        // Crea una nueva instancia del modelo para la consulta completa.
-        $fullProspectQuery = $prospectModel->select('prospects.*');
-
-        // Añade uniones condicionales.
-        if (! empty($prospect['states_id'])) {
-            $fullProspectQuery = $fullProspectQuery->state();
-        }
-
-        if (! empty($prospect['origin_id'])) {
-            $fullProspectQuery = $fullProspectQuery->origin();
-        }
-
-        if (! empty($prospect['service_id'])) {
-            $fullProspectQuery = $fullProspectQuery->service();
-        }
-
-        // Ejecuta la consulta.
-        $fullProspect = $fullProspectQuery->find($id);
+        
+        $fullProspect = $prospectModel
+            ->select('prospects.*')->state()->landing()
+            ->where('prospects.id', $id)->first();
 
         return view('backend/modules/prospects/show', [
             'sessionUser' => session('user'),

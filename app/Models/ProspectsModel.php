@@ -54,7 +54,9 @@ class ProspectsModel extends Model
      */
     public function landing()
     {
-        $this->builder()->join('landings', 'landings.id = prospects.landing_id', 'inner');
+        $this->builder()
+            ->select('landings.name as origin')
+            ->join('landings', 'landings.id = prospects.landing_id', 'left');
 
         return $this;
     }
@@ -72,7 +74,9 @@ class ProspectsModel extends Model
 
     public function state()
     {
-        $this->builder()->join('estados', 'estados.id = prospects.state_id', 'inner');
+        $this->builder()
+            ->select('e.name as state')
+            ->join('estados as e', 'e.id = prospects.state_id', 'left');
 
         return $this;
     }
