@@ -3,16 +3,23 @@
         <div class="flex justify-between items-center">
             <!-- LOGO -->
             <a href="" class="flex items-center space-x-2">
-                <img id="logo-img" src="<?= base_url('images/landing/home/logo-savient.svg') ?>" alt="Logo" class="w-auto h-[100px] lg:h-[134px] transition-all duration-300">
+                <img id="logo-img" src="<?= base_url('images/landing/home/logo-savient.svg') ?>" alt="Logo"
+                    class="w-auto h-[100px] lg:h-[134px] transition-all duration-300">
             </a>
 
             <!-- NAV LINKS -->
             <nav class="hidden md:flex items-center space-x-8 text-[15px] font-medium text-gray-700">
-                <a href="tel:7226480074" class=" lg:text-[22px] font-semibold text-white font-poppins">Llámanos 722 648 0074</a>
-                <a href="#form" class=" px-[20px] py-[10px] rounded-[25px] bg-[#E73636] hover:bg-[#032039] text-white font-poppins text-xl font-medium">Solicita tu cotización</a>
+                <a href="tel:<?= esc(stripAllSpaces(setting()->get('App.apps', 'whatsapp'))) ?>"
+                    class=" lg:text-[22px] font-semibold text-white font-poppins">Llámanos
+                    <?= esc(setting()->get('App.apps', 'whatsapp')) ?></a>
+                <a href="#form"
+                    class=" px-[20px] py-[10px] rounded-[25px] bg-[#E73636] hover:bg-[#032039] text-white font-poppins text-xl font-medium">Solicita
+                    tu cotización</a>
             </nav>
 
-            <a href="tel:7226480074" class=" lg:text-[22px] font-semibold text-white md:hidden block font-poppins">Llámanos 722 648 0074</a>
+            <a href="tel:<?= esc(stripAllSpaces(setting()->get('App.apps', 'whatsapp'))) ?>"
+                class=" lg:text-[22px] font-semibold text-white md:hidden block font-poppins">Llámanos
+                <?= esc(setting()->get('App.apps', 'whatsapp')) ?></a>
 
         </div>
     </div>
@@ -31,28 +38,28 @@
 
 
 <script>
-    const header = document.getElementById('site-header');
-    const logo = document.getElementById('logo-img');
-    const scrollThreshold = 50; // píxeles para activar el cambio
+const header = document.getElementById('site-header');
+const logo = document.getElementById('logo-img');
+const scrollThreshold = 50; // píxeles para activar el cambio
 
-    function onScroll() {
-        if (window.scrollY > scrollThreshold) {
-            header.classList.add('bg-[#093B57]/95', 'backdrop-blur-sm', 'shadow-md');
-            logo.classList.add('lg:h-[80px]'); // logo pequeño en pantallas lg y superior
-            logo.classList.remove('lg:h-[134px]');
-        } else {
-            header.classList.remove('bg-[#093B57]/95', 'backdrop-blur-sm', 'shadow-md');
-            logo.classList.remove('lg:h-[80px]');
-            logo.classList.add('lg:h-[134px]');
-        }
+function onScroll() {
+    if (window.scrollY > scrollThreshold) {
+        header.classList.add('bg-[#093B57]/95', 'backdrop-blur-sm', 'shadow-md');
+        logo.classList.add('lg:h-[80px]'); // logo pequeño en pantallas lg y superior
+        logo.classList.remove('lg:h-[134px]');
+    } else {
+        header.classList.remove('bg-[#093B57]/95', 'backdrop-blur-sm', 'shadow-md');
+        logo.classList.remove('lg:h-[80px]');
+        logo.classList.add('lg:h-[134px]');
     }
+}
 
-    window.addEventListener('scroll', onScroll, {
-        passive: true
-    });
+window.addEventListener('scroll', onScroll, {
+    passive: true
+});
 
-    // menú móvil
-    document.getElementById('menu-btn').addEventListener('click', () => {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
+// menú móvil
+document.getElementById('menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+});
 </script>
