@@ -9,17 +9,17 @@
 
             <!-- NAV LINKS -->
             <nav class="hidden md:flex items-center space-x-8 text-[15px] font-medium text-gray-700">
-                <a href="tel:<?= esc(stripAllSpaces(setting()->get('App.apps', 'whatsapp'))) ?>"
+                <a href="tel:<?= esc(stripAllSpaces(setting()->get('App.general', 'phones'))) ?>"
                     class=" lg:text-[22px] font-semibold text-white font-poppins">Llámanos
-                    <?= esc(setting()->get('App.apps', 'whatsapp')) ?></a>
+                    <?= esc(setting()->get('App.general', 'phones')) ?></a>
                 <a href="#form"
                     class=" px-[20px] py-[10px] rounded-[25px] bg-[#E73636] hover:bg-[#032039] text-white font-poppins text-xl font-medium">Solicita
                     tu cotización</a>
             </nav>
 
-            <a href="tel:<?= esc(stripAllSpaces(setting()->get('App.apps', 'whatsapp'))) ?>"
+            <a href="tel:<?= esc(stripAllSpaces(setting()->get('App.general', 'phones'))) ?>"
                 class=" lg:text-[22px] font-semibold text-white md:hidden block font-poppins">Llámanos
-                <?= esc(setting()->get('App.apps', 'whatsapp')) ?></a>
+                <?= esc(setting()->get('App.general', 'phones')) ?></a>
 
         </div>
     </div>

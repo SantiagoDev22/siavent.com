@@ -43,9 +43,8 @@
                     class=" px-[20px] py-[10px] rounded-[25px] mt-10 border-white border-[2px] hover:border-transparent bg-transparent hover:bg-white text-white hover:text-[#E73636] font-medium text-xl font-poppins">Regresar</a>
                 <p class=" lg:text-lg text-base leading-[180%] text-center text-white font-poppins font-medium mt-10">
                     ¿Tienes dudas? Envíanos un mensaje</p>
-                <a href="tel:<?= esc(stripAllSpaces(setting()->get('App.apps', 'whatsapp'))) ?>"
-                    class=" font-bold text-white lg:text-lg text-base leading-[180%] text-center font-poppins"><?= esc(setting()->get('App.apps', 'whatsapp')) ?>722
-                    648 0074</a>
+                <a href="tel:<?= esc(stripAllSpaces(setting()->get('App.general', 'phones'))) ?>"
+                    class=" font-bold text-white lg:text-lg text-base leading-[180%] text-center font-poppins"><?= esc(setting()->get('App.general', 'phones')) ?></a>
             </div>
         </div>
     </div>
